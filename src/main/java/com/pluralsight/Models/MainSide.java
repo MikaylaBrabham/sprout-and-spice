@@ -1,4 +1,4 @@
 package com.pluralsight.Models;
 
-public class Sides {
+public class MainSide {
 }
