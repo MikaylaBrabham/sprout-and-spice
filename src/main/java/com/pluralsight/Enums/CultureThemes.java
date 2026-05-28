@@ -10,9 +10,7 @@ public enum CultureThemes {
     ITAL_CARRIBBEAN("Ital Caribbean Cuisine"),
     OKINAWAN_JAPANESE("Okinawan Japanese Cuisine"),
     BRAZILLIAN("Brazilian Cuisine"),
-    DUTCH;
-
-    CUISINE("Dutch Cuisine");
+    DUTCH_CUISINE("Dutch Cuisine");
 
     private final String displayName;
 
