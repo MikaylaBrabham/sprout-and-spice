@@ -1,4 +1,4 @@
 package com.pluralsight.Enums;
 
-public class DrinkSize {
+public enum DrinkSize {
 }

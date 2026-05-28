@@ -1,4 +1,4 @@
 package com.pluralsight.Enums;
 
-public class SpecialOptions {
+public enum SpecialOptions {
 }
