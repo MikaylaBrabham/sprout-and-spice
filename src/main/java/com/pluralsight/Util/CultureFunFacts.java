@@ -1,4 +1,4 @@
-package com.pluralsight.Services;
+package com.pluralsight.Util;
 
 public class CultureFunFacts {
 }
