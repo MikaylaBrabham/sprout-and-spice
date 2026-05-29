@@ -20,18 +20,41 @@ public class MenuServices {
         menu = new HashMap<>();
         loadMyMenu();
     }
-    //create menu options for Southern Comfort Food
+    private void loadMyMenu() {
+        //create menu options for Southern Comfort Food
+        menu.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, new CulturalMenu(
+                List.of("Cornbread bites", "Collard Greens"),
+                List.of("Fried Green Tomatoes", "Hush Puppies"),
+                List.of("Vegan Jambalaya", "Red Beans and Rice"),
+                List.of("Yellow Grits", "Vegan Shrimp"),
+                        ""
+                        , "Fried Chicken", "Shrimp and Grits"),
 
-    //create menu options for Salkahatchie
+        ))
+
+        //create menu options for Salkahatchie
+        menu.put(CultureThemes.SALKEHATCHIE, new CulturalMenu
 
 
-    // create menu options for South Indian Tamilian Cuisine
-    //create menu options for Levantine Mediterranean Cuisine
-    //create menu options for Ital Caribbean Cuisine
-    //create menu options for Okinawan Japanese Cuisine
-    //create menu options for Brazilian Cuisine
-    //create menu options for Dutch Cuisine
-    //create menu options for Yoruba Nigerian Cuisine
+
+        //create menu options for Yoruba Nigerian Cuisine
+        menu.put(CultureThemes.YORUBA_NIGERIAN, new CulturalMenu();
+        // create menu options for South Indian Tamilian Cuisine
+        menu.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, new CulturalMenu());
+        //create menu options for Levantine Mediterranean Cuisine
+        menu.put(CultureThemes.LEVANTINE_MEDITERRANEAN, new CulturalMenu())
+        //create menu options for Ital Caribbean Cuisine
+        menu.put(CultureThemes.ITAL_CARIBBEAN, new CulturalMenu())
+        //create menu options for Okinawan Japanese Cuisine
+        menu.put(CultureThemes.OKINAWAN_JAPANESE, new CulturalMenu())
+        //create menu options for Brazilian Cuisine
+        menu.put(CultureThemes.BRAZILIAN, new CulturalMenu())
+        //create menu options for Dutch Cuisine
+        menu.put(CultureThemes.DUTCH_CUISINE, new CulturalMenu())
+
+
+    }
+    /
     ));
 
 
