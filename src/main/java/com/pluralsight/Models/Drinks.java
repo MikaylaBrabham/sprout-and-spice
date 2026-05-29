@@ -46,7 +46,7 @@ public class Drinks extends MenuItem {
             case SALKEHATCHIE -> "Peach hibiscus sweet tea inspired by the flavors of the Salkehatchie region.";
             case SOUTHERN_CAROLINA_LOWCOUNTRY ->
                     "A bright fruit tea inspired by the vibrant flavors of the Southern Carolina Lowcountry, featuring a blend of citrus and berries.";
-            case SOUTH_INDIAN_GUJARATI ->
+            case SOUTH_INDIAN_TAMILIAN ->
                     "Experience the rich flavors of South India with our mango rose tea inspired by warm spices and floral notes.";
             case YORUBA_NIGERIAN ->
                     "Enjoy our ginger and hibiscus drink called Zobo which is a fan favorite all around Nigeria.";

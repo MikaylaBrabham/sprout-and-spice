@@ -10,8 +10,13 @@ import java.util.Map;
 public class MenuServices {
 
     //add properties
+    private Map<CultureThemes, List<String>> culturalBases;
+
+    private Map<CultureThemes, List<String>> funFacts;
 
     //add constructors
-
-
+    public MenuServices() {
+        cultureIngredients = new HashMap<>();
+        funFacts = new HashMap<>();
+    }
 }

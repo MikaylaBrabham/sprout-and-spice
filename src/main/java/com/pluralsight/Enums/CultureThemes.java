@@ -5,7 +5,7 @@ public enum CultureThemes {
     SOUTHERN_CAROLINA_LOWCOUNTRY("Southern Comfort Food"),
     YORUBA_NIGERIAN("Yoruba Nigerian Cuisine"),
     SALKEHATCHIE("Salkehatchie Cuisine"),
-    SOUTH_INDIAN_GUJARATI("South Indian Gujarati Cuisine"),
+    SOUTH_INDIAN_TAMILIAN("South Indian Tamilian Cuisine"),
     LEVANTINE_MEDITERRANEAN("Levantine Mediterranean Cuisine"),
     ITAL_CARIBBEAN("Ital Caribbean Cuisine"),
     OKINAWAN_JAPANESE("Okinawan Japanese Cuisine"),
