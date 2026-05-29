@@ -4,6 +4,7 @@ package com.pluralsight.Models;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.stream.Collectors;
+
 public class Order {
     //add array for menu
     private ArrayList<MenuItem> menuItems;
@@ -58,7 +59,7 @@ public class Order {
                 ======================================
                 """ + orderDetails +
                 "\n\nTotal: $" + String.format("%.2f", getTotalPrice()) +
-                "\n\nThank you for dining with us!";
-        "\n======================================\n";
+                "\n\nThank you for dining with us!" +
+                "\n===================================";
     }
 }
