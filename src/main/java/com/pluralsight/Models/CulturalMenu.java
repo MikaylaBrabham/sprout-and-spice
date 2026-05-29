@@ -42,4 +42,41 @@ public class CulturalMenu {
         this.condiments = condiments;
         this.funFact = funFact;
     }
+// add getters
+
+    public String getBase() {
+        return base;
+    }
+
+    public List<String> getVegetarianPremiums() {
+        return vegetarianPremiums;
+    }
+
+    public List<String> getVegetarianRegulars() {
+        return vegetarianRegulars;
+    }
+
+    public List<String> getVeganPremiums() {
+        return veganPremiums;
+    }
+
+    public List<String> getVeganRegulars() {
+        return veganRegulars;
+    }
+
+    public List<String> getGlutenFreePremiums() {
+        return glutenFreePremiums;
+    }
+
+    public List<String> getGlutenFreeRegulars() {
+        return glutenFreeRegulars;
+    }
+
+    public List<String> getCondiments() {
+        return condiments;
+    }
+
+    public List<String> getFunFact() {
+        return funFact;
+    }
 }
