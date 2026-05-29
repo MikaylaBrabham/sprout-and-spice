@@ -4,6 +4,7 @@ package com.pluralsight.Services;
 
 import com.pluralsight.Enums.CultureThemes;
 import com.pluralsight.Models.CulturalMenu;
+import com.pluralsight.Models.Order;
 
 //import hashmap, lists, and maps
 import java.util.HashMap;
@@ -14,7 +15,7 @@ import java.util.Map;
 public class MenuServices {
 
     //add properties
-    private Map<CultureThemes, CulturalMenu> menu;
+    private final Map<CultureThemes, CulturalMenu> menu;
 
     //add new hashmap and load menu
     public MenuServices() {
@@ -39,7 +40,7 @@ public class MenuServices {
                 // gluten free premium
                 List.of("Cajun Sweet Potato Bowl", "Herbed Garlic Veggies"),
                 // condiments
-                List.of("Maple Glaze", "Hot Sauce", "Garlic Herb Sauce")));
+                List.of("Maple Glaze", "Hot Sauce", "Garlic Herb Sauce"),
                 // specialty drinks
                 List.of("Peach Rooibos Tea", "Berry Sweet Tea Cooler")));
 
@@ -52,8 +53,8 @@ public class MenuServices {
                 List.of("Wild Berry Harvest Bowl", "Smoked Cedar Veggies"),
                 List.of("Roasted Potatoes", "Corn Cakes"),
                 List.of("Ancient Grain Bowl", "Maple Seed Crunch"),
-                List.of("Berry Sauce", "Herb Oil")));
-               List.of("Berry Harvest Cooler", "Maple Mint Tea")));
+                List.of("Berry Sauce", "Herb Oil"),
+                List.of("Berry Harvest Cooler", "Maple Mint Tea")));
 
         // Yoruba Nigerian Cuisine
         menu.put(CultureThemes.YORUBA_NIGERIAN, new CulturalMenu(
@@ -64,8 +65,8 @@ public class MenuServices {
                 List.of("Vegan Jollof Bowl", "Spicy Coconut Chickpeas"),
                 List.of("Rice", "Roasted Yam"),
                 List.of("Pepper Veggie Bowl", "Cassava Crisps"),
-                List.of("Pepper Sauce", "Tomato Stew")));
-               // List.of("Mango Zobo Cooler", "Pineapple Ginger Hibiscus Tea")));
+                List.of("Pepper Sauce", "Tomato Stew"),
+                List.of("Mango Zobo Cooler", "Pineapple Ginger Hibiscus Tea")));
 
         // South Indian Tamilian Cuisine
         menu.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, new CulturalMenu(
@@ -112,8 +113,8 @@ public class MenuServices {
                 List.of("Purple Power Bowl", "Tofu Garden Bowl"),
                 List.of("Rice Noodles", "Sweet Potato Cubes"),
                 List.of("Sesame Veggie Bowl", "Ginger Rice Bowl"),
-                List.of("Sesame Sauce", "Ginger Soy Glaze")));
-            List.of("Purple Sweet Potato Smoothie", "Berry Matcha-Free Tea")));
+                List.of("Sesame Sauce", "Ginger Soy Glaze"),
+                List.of("Purple Sweet Potato Smoothie", "Berry Matcha-Free Tea")));
 
         // Brazilian Cuisine
         menu.put(CultureThemes.BRAZILIAN, new CulturalMenu(
@@ -124,7 +125,7 @@ public class MenuServices {
                 List.of("Roasted Cassava", "Herbed Rice"),
                 List.of("Citrus Veggie Bowl", "Cassava Crunch Bowl"),
                 List.of("Cilantro Lime Sauce", "Garlic Citrus Sauce"),
-              List.of("Acai Berry Cooler", "Lime Coconut Tea")));
+                List.of("Acai Berry Cooler", "Lime Coconut Tea")));
 
         // Dutch Cuisine
         menu.put(CultureThemes.DUTCH_CUISINE, new CulturalMenu(
@@ -135,15 +136,18 @@ public class MenuServices {
                 List.of("Roasted Potatoes", "Braised Red Cabbage"),
                 List.of("Cabbage Veggie Bowl", "Potato Herb Bowl"),
                 List.of("Mustard Sauce", "Garlic Herb Sauce"),
-              List.of("Dutch Apple Spice Cooler", "Berry Cinnamon Tea")));
+                List.of("Dutch Apple Spice Cooler", "Berry Cinnamon Tea")));
     }
 
 
-        //add a method to load menu
-        public CulturalMenu getMenu(CultureThemes cultureTheme) {
-            return menu.get(cultureTheme);
-        }
+    //add a method to load menu
+    public CulturalMenu getMenu(CultureThemes cultureTheme) {
+        return menu.get(cultureTheme);
     }
+
+    public void displaySides(Order order) {
+    }
+}
 
 
 

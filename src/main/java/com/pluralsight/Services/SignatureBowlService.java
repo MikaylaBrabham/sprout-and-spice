@@ -9,7 +9,6 @@ import com.pluralsight.Models.MosaicBowl;
 import com.pluralsight.Models.Toppings;
 
 //import hashmap
-import java.util.HashMap;
 import java.util.Map;
 
 public class SignatureBowlService {
@@ -45,7 +44,7 @@ public class SignatureBowlService {
         CulturalMenu menu = menuServices.getMenu(theme);
 
         //add mosaic bowl with size and theme
-        MosaicBowl bowl = new MosaicBowl(bowlSize, theme, menuServices.getBase(), false);
+        MosaicBowl bowl = new MosaicBowl(bowlSize, theme, false);
         bowl.setSignatureName(getSignatureBowls(theme));
         //add base and toppings to signature bowl
         bowl.addToppings(new Toppings(menu.getVeganPremiums().get(0), ToppingType.VEGAN_PREMIUM_TOPPING, false));

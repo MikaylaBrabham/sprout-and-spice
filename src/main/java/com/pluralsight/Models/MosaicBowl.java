@@ -20,7 +20,7 @@ public class MosaicBowl extends MenuItem{
 
     //add constructors
 
-    public MosaicBowl(BowlSize bowlSize, CultureThemes cultureTheme, String base, boolean passportPowerUp) {
+    public MosaicBowl(BowlSize bowlSize, CultureThemes cultureTheme, boolean passportPowerUp) {
         super("Mosaic Bowl");
         this.bowlSize = bowlSize;
         this.cultureTheme = cultureTheme;
