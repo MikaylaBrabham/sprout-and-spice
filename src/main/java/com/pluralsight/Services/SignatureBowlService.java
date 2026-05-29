@@ -14,7 +14,7 @@ import java.util.Map;
 public class SignatureBowlService {
 
     //add strings
-    private Map<CultureThemes, MosaicBowl> signatureBowls;
+    private Map<CultureThemes, String> signatureBowls;
     private MenuServices menuServices;
 
     //add constructor
@@ -28,9 +28,9 @@ public class SignatureBowlService {
     //trying not to make them sound corny
     private void loadSignatureBowls() {
 
-        MosaicBowl sign; signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl"); // S.O MOM
+        signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl"); // S.O MOM
         signatureBowls.put(CultureThemes.SALKEHATCHIE, "Low Country Bowl"); // S.O GRANDMA
-        MosaicBowl JoyBowl = new MosaicBowl(signatureBowls.put(CultureThemes.YORUBA_NIGERIAN, "Joy Bowl")); // S.O MICHAEL
+        signatureBowls.put(CultureThemes.YORUBA_NIGERIAN, "Joy Bowl"); // S.O MICHAEL
         signatureBowls.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, "Golden Bowl"); // S.O SMITA
         signatureBowls.put(CultureThemes.LEVANTINE_MEDITERRANEAN, "Garden Bowl"); // S.O GABRIEL
         signatureBowls.put(CultureThemes.ITAL_CARIBBEAN, "Island Bowl"); // S.O KESIAH
@@ -51,7 +51,7 @@ public class SignatureBowlService {
         bowl.addToppings(new Toppings(menu.getVeganRegulars().get(0), ToppingType.VEGAN_REGULAR_TOPPING, false));
         bowl.addToppings(new Toppings(menu.getGlutenFreeRegulars().get(0), ToppingType.GLUTEN_FREE_REGULAR_TOPPING, false));
         bowl.addToppings(new Toppings(menu.getGlutenFreePremiums().get(0), ToppingType.GLUTEN_FREE_PREMIUM_TOPPING, false));
-        bowl.addToppings(new Toppings(menu.getCondiments().get(0), ToppingType.CONDIMENT, false));
+        bowl.addToppings(new Toppings(menu.getCondiments().get(0), ToppingType.CONDIMENTS, false));
         //bowl.setSignatureName(signatureBowls.get(theme));
         return bowl;
     }
