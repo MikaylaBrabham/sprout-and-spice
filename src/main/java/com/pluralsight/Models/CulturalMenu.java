@@ -26,10 +26,7 @@ public class CulturalMenu {
             List<String> veganPremiums,
             List<String> veganRegulars,
             List<String> glutenFreePremiums,
-            List<String> glutenFreeRegulars,
-            List<String> condiments,
-            List<String> specialtyDrinks,
-            List<String> funFacts
+            List<String> glutenFreeRegulars
     ) {
         this.bases = bases;
         this.vegetarianPremiums = vegetarianPremiums;
@@ -40,7 +37,22 @@ public class CulturalMenu {
         this.glutenFreeRegulars = glutenFreeRegulars;
         this.condiments = condiments;
         this.specialtyDrinks = specialtyDrinks;
-        this.funFacts = funFacts;
+        //this.funFacts = funFacts;
+    }
+
+    public CulturalMenu(List<String> bases, List<String> vegetarianPremiums, List<String> vegetarianRegulars, List<String> veganPremiums, List<String> veganRegulars, List<String> glutenFreePremiums, List<String> glutenFreeRegulars, List<String> SpecialtyDrinks) {
+        this.bases = bases;
+        this.vegetarianPremiums = vegetarianPremiums;
+        this.vegetarianRegulars = vegetarianRegulars;
+        this.veganPremiums = veganPremiums;
+        this.veganRegulars = veganRegulars;
+        this.glutenFreePremiums = glutenFreePremiums;
+        this.glutenFreeRegulars = glutenFreeRegulars;
+        this.specialtyDrinks = specialtyDrinks;
+       // this.funFacts = funFacts;
+    }
+
+    public <E> CulturalMenu(List<E> es, List<E> es1, List<E> es2, List<E> es3, List<E> es4, List<E> es5, List<E> es6, List<E> es7, List<E> es8) {
     }
 
     //add getters for menu items
@@ -80,7 +92,6 @@ public class CulturalMenu {
         return specialtyDrinks;
     }
 
-    public List<String> getFunFacts() {
-        return funFacts;
+    //public List<String> getFunFacts() {
+      //  return funFacts;
     }
-}
