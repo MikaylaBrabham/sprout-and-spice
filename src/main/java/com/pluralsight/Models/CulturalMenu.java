@@ -42,6 +42,9 @@ public class CulturalMenu {
         this.condiments = condiments;
         this.funFact = funFact;
     }
+
+    public CulturalMenu(List<String> strings, List<String> vegetarianPremiums, List<String> vegetarianRegulars, List<String> veganPremiums, List<String> veganRegulars, List<String> glutenFreePremiums, List<String> glutenFreeRegulars, List<String> condiments) {
+    }
 // add getters
 
     public String getBase() {
