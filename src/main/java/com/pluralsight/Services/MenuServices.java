@@ -4,7 +4,7 @@ package com.pluralsight.Services;
 
 import com.pluralsight.Enums.CultureThemes;
 import com.pluralsight.Models.CulturalMenu;
-import com.pluralsight.Models.Order;
+//import com.pluralsight.Models.Order;
 
 //import hashmap, lists, and maps
 import java.util.HashMap;
@@ -28,7 +28,7 @@ public class MenuServices {
         // Southern Carolina Lowcountry
         menu.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, new CulturalMenu(
                 // vegetarian regular
-                List.of("Yellow Grits", "Cornbread Bites", "Collard Greens"),
+                List.of("Yellow Grits", "Collard Greens"),
                 // vegetarian premium
                 List.of("Fried Green Tomatoes", "Sweet Potato Hash"),
                 // vegan regular
@@ -40,9 +40,9 @@ public class MenuServices {
                 // gluten free premium
                 List.of("Cajun Sweet Potato Bowl", "Herbed Garlic Veggies"),
                 // condiments
-                List.of("Maple Glaze", "Hot Sauce", "Garlic Herb Sauce"),
+                List.of("Maple Glaze", "Hot Sauce", "Garlic Herb Sauce")));
                 // specialty drinks
-                List.of("Peach Rooibos Tea", "Berry Sweet Tea Cooler")));
+                //List.of("Peach Rooibos Tea", "Berry Sweet Tea Cooler")));
 
         // Salkahatchie Indigenous Inspired
         menu.put(CultureThemes.SALKEHATCHIE, new CulturalMenu(
@@ -53,8 +53,8 @@ public class MenuServices {
                 List.of("Wild Berry Harvest Bowl", "Smoked Cedar Veggies"),
                 List.of("Roasted Potatoes", "Corn Cakes"),
                 List.of("Ancient Grain Bowl", "Maple Seed Crunch"),
-                List.of("Berry Sauce", "Herb Oil"),
-                List.of("Berry Harvest Cooler", "Maple Mint Tea")));
+                List.of("Berry Sauce", "Herb Oil")));
+                //List.of("Berry Harvest Cooler", "Maple Mint Tea")));
 
         // Yoruba Nigerian Cuisine
         menu.put(CultureThemes.YORUBA_NIGERIAN, new CulturalMenu(
@@ -65,8 +65,8 @@ public class MenuServices {
                 List.of("Vegan Jollof Bowl", "Spicy Coconut Chickpeas"),
                 List.of("Rice", "Roasted Yam"),
                 List.of("Pepper Veggie Bowl", "Cassava Crisps"),
-                List.of("Pepper Sauce", "Tomato Stew"),
-                List.of("Mango Zobo Cooler", "Pineapple Ginger Hibiscus Tea")));
+                List.of("Pepper Sauce", "Tomato Stew")));
+                //List.of("Mango Zobo Cooler", "Pineapple Ginger Hibiscus Tea")
 
         // South Indian Tamilian Cuisine
         menu.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, new CulturalMenu(
@@ -77,8 +77,8 @@ public class MenuServices {
                 List.of("Golden Curry Bowl", "Spiced Lentil Bowl"),
                 List.of("Rice Cakes", "Roasted Chickpeas"),
                 List.of("Coconut Curry Veggies", "Spiced Rice Bowl"),
-                List.of("Mint Chutney", "Mango Chutney"),
-                List.of("Mango Rose Cooler", "Cardamom Vanilla Tea")));
+                List.of("Mint Chutney", "Mango Chutney")));
+                //List.of("Mango Rose Cooler", "Cardamom Vanilla Tea")
 
         // Levantine Mediterranean
         menu.put(CultureThemes.LEVANTINE_MEDITERRANEAN, new CulturalMenu(
@@ -89,8 +89,8 @@ public class MenuServices {
                 List.of("Falafel Garden Bowl", "Tahini Chickpea Bowl"),
                 List.of("Rice Pilaf", "Roasted Cauliflower"),
                 List.of("Mediterranean Salad", "Tahini Herb Bowl"),
-                List.of("Tahini Sauce", "Garlic Yogurt Sauce"),
-                List.of("Mint Pomegranate Cooler", "Lemon Rose Tea")));
+                List.of("Tahini Sauce", "Garlic Yogurt Sauce")));
+                //List.of("Mint Pomegranate Cooler", "Lemon Rose Tea")
 
         // Ital Caribbean
         menu.put(CultureThemes.ITAL_CARIBBEAN, new CulturalMenu(
@@ -101,8 +101,8 @@ public class MenuServices {
                 List.of("Ital Rainbow Bowl", "Coconut Curry Bowl"),
                 List.of("Rice", "Roasted Cassava"),
                 List.of("Island Harvest Bowl", "Jerk Veggie Bowl"),
-                List.of("Pineapple Sauce", "Ginger Lime Sauce"),
-                List.of("Pineapple Ginger Cooler", "Coconut Berry Tea")));
+                List.of("Pineapple Sauce", "Ginger Lime Sauce")));
+                //List.of("Pineapple Ginger Cooler", "Coconut Berry Tea")
 
         // Okinawan Japanese
         menu.put(CultureThemes.OKINAWAN_JAPANESE, new CulturalMenu(
@@ -113,8 +113,8 @@ public class MenuServices {
                 List.of("Purple Power Bowl", "Tofu Garden Bowl"),
                 List.of("Rice Noodles", "Sweet Potato Cubes"),
                 List.of("Sesame Veggie Bowl", "Ginger Rice Bowl"),
-                List.of("Sesame Sauce", "Ginger Soy Glaze"),
-                List.of("Purple Sweet Potato Smoothie", "Berry Matcha-Free Tea")));
+                List.of("Sesame Sauce", "Ginger Soy Glaze")));
+                //List.of("Purple Sweet Potato Smoothie", "Berry Matcha-Free Tea")
 
         // Brazilian Cuisine
         menu.put(CultureThemes.BRAZILIAN, new CulturalMenu(
@@ -124,8 +124,8 @@ public class MenuServices {
                 List.of("Rio Rainbow Bowl", "Spiced Bean Bowl"),
                 List.of("Roasted Cassava", "Herbed Rice"),
                 List.of("Citrus Veggie Bowl", "Cassava Crunch Bowl"),
-                List.of("Cilantro Lime Sauce", "Garlic Citrus Sauce"),
-                List.of("Acai Berry Cooler", "Lime Coconut Tea")));
+                List.of("Cilantro Lime Sauce", "Garlic Citrus Sauce")));
+                //List.of("Acai Berry Cooler", "Lime Coconut Tea")
 
         // Dutch Cuisine
         menu.put(CultureThemes.DUTCH_CUISINE, new CulturalMenu(
@@ -135,8 +135,8 @@ public class MenuServices {
                 List.of("Dutch Harvest Bowl", "Mushroom Veggie Bowl"),
                 List.of("Roasted Potatoes", "Braised Red Cabbage"),
                 List.of("Cabbage Veggie Bowl", "Potato Herb Bowl"),
-                List.of("Mustard Sauce", "Garlic Herb Sauce"),
-                List.of("Dutch Apple Spice Cooler", "Berry Cinnamon Tea")));
+                List.of("Mustard Sauce", "Garlic Herb Sauce")));
+                //List.of("Dutch Apple Spice Cooler", "Berry Cinnamon Tea")
     }
 
 
@@ -145,8 +145,8 @@ public class MenuServices {
         return menu.get(cultureTheme);
     }
 
-    public void displaySides(Order order) {
-    }
+    //public void displaySides(Order order) {
+   // }
 }
 
 

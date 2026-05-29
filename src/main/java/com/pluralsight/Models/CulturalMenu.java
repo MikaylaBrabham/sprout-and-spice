@@ -5,16 +5,16 @@ import java.util.List;
 public class CulturalMenu {
 
     //add properties
-    private List<String> bases;
-    private List<String> vegetarianPremiums;
-    private List<String> vegetarianRegulars;
-    private List<String> veganPremiums;
-    private List<String> veganRegulars;
-    private List<String> glutenFreePremiums;
-    private List<String> glutenFreeRegulars;
+    private final List<String> bases;
+    private final List<String> vegetarianPremiums;
+    private final List<String> vegetarianRegulars;
+    private final List<String> veganPremiums;
+    private final List<String> veganRegulars;
+    private final List<String> glutenFreePremiums;
+    private final List<String> glutenFreeRegulars;
 
     private List<String> condiments;
-    private List<String> specialtyDrinks;
+    //private List<String> specialtyDrinks;
     //private List<String> funFacts) --
 
 
@@ -22,7 +22,7 @@ public class CulturalMenu {
     //add constructor for menu items
 
     public CulturalMenu(List<String> bases, List<String> vegetarianPremiums, List<String> vegetarianRegulars, List<String> veganPremiums, List<String> veganRegulars,
-                        List<String> glutenFreePremiums, List<String> glutenFreeRegulars, List<String> condiments, List<String> specialtyDrinks) {
+                        List<String> glutenFreePremiums, List<String> glutenFreeRegulars) {
         this.bases = bases;
         this.vegetarianPremiums = vegetarianPremiums;
         this.vegetarianRegulars = vegetarianRegulars;
@@ -30,8 +30,7 @@ public class CulturalMenu {
         this.veganRegulars = veganRegulars;
         this.glutenFreePremiums = glutenFreePremiums;
         this.glutenFreeRegulars = glutenFreeRegulars;
-        this.condiments = condiments;
-        this.specialtyDrinks = specialtyDrinks;
+        //this.specialtyDrinks = specialtyDrinks;
             }
 
             //add getters for menu items
@@ -65,10 +64,10 @@ public class CulturalMenu {
 
             public List<String> getCondiments () {
                 return condiments;
-            }
 
-            public List<String> getSpecialtyDrinks () {
-                return specialtyDrinks;
+
+            //public List<String> getSpecialtyDrinks () {
+               // return specialtyDrinks;
             }
         }
 
