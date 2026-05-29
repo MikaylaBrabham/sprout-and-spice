@@ -20,7 +20,26 @@ public class CulturalMenu {
     //condiments
     private List<String> condiments;
 
-
     // funfacts
-    private List<String> funFac;
+    private List<String> funFact;
+
+
+    //add constructors
+
+
+    public CulturalMenu(String base, List<String> vegetarianPremiums,
+                        List<String> vegetarianRegulars, List<String> veganPremiums,
+                        List<String> veganRegulars, List<String> glutenFreePremiums,
+                        List<String> glutenFreeRegulars, List<String> condiments,
+                        List<String> funFact) {
+        this.base = base;
+        this.vegetarianPremiums = vegetarianPremiums;
+        this.vegetarianRegulars = vegetarianRegulars;
+        this.veganPremiums = veganPremiums;
+        this.veganRegulars = veganRegulars;
+        this.glutenFreePremiums = glutenFreePremiums;
+        this.glutenFreeRegulars = glutenFreeRegulars;
+        this.condiments = condiments;
+        this.funFact = funFact;
+    }
 }
