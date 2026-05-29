@@ -9,14 +9,14 @@ import java.util.stream.Collectors;
 import java.util.ArrayList;
 
 //create meals from menu class
-public class MosaicBowl extends MenuItem{
+public abstract class MosaicBowl extends MenuItem{
     //add properties
-    private BowlSize bowlSize;
-    private CultureThemes cultureTheme;
+    private final BowlSize bowlSize;
+    private final CultureThemes cultureTheme;
     private String base;
-    private ArrayList<Toppings> toppings;
+    private final ArrayList<Toppings> toppings;
     private String signatureName;
-    private boolean passportPowerUp;
+    private final boolean passportPowerUp;
 
     //add constructors
 
@@ -24,7 +24,6 @@ public class MosaicBowl extends MenuItem{
         super("Mosaic Bowl");
         this.bowlSize = bowlSize;
         this.cultureTheme = cultureTheme;
-        this.base = base;
         this.passportPowerUp = passportPowerUp;
         this.toppings = new ArrayList<>();
         this.signatureName = "Build Your Own Mosaic Bowl";

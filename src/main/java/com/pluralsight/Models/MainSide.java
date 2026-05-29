@@ -21,4 +21,9 @@ public class MainSide extends MenuItem {
     public String getMenuDetails() {
         return sideType + "Main Side Dish $" + String.format("%.2f", getPrice());
     }
+
+    @Override
+    public void setBase(String s) {
+
+    }
 }

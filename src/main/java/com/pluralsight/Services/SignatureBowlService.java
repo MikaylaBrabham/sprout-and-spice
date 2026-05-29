@@ -13,15 +13,14 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class SignatureBowlService {
-
     //add strings
-    private Map<CultureThemes, MosaicBowl> signatureBowls = new HashMap<>();
+    private Map<CultureThemes, String> signatureBowls;
     private MenuServices menuServices;
 
     //add constructor
     public SignatureBowlService(MenuServices menuServices) {
-        this.signatureBowls = signatureBowls;
         this.menuServices = menuServices;
+        this.signatureBowls = new HashMap<>();
         loadSignatureBowls();
     }
 
@@ -45,8 +44,14 @@ public class SignatureBowlService {
         CulturalMenu menu = menuServices.getMenu(theme);
 
         //add mosaic bowl with size and theme
-        MosaicBowl bowl = new MosaicBowl(bowlSize, theme, false);
+        MosaicBowl bowl = new MosaicBowl(bowlSize, theme, false) {
+            @Override
+            public void setBase(String s) {
+
+            }
+        };
         bowl.setSignatureName(getSignatureBowls(theme));
+        bowl.setBase(menu.getBases().get(0));
 
         //add base and toppings to signature bowl
         bowl.addToppings(new Toppings(menu.getVeganPremiums().get(0), ToppingType.VEGAN_PREMIUM_TOPPING, false));

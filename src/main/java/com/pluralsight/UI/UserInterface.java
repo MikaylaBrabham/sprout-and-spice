@@ -149,7 +149,12 @@ public class UserInterface {
 
         boolean passportPowerUp = passportChoice.equalsIgnoreCase("Y");
 
-        return new MosaicBowl(bowlSize, cultureTheme, passportPowerUp);
+        return new MosaicBowl(bowlSize, cultureTheme, passportPowerUp) {
+            @Override
+            public void setBase(String s) {
+
+            }
+        };
     }
 
     // choose bowl size
