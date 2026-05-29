@@ -5,8 +5,8 @@ import com.pluralsight.Enums.BowlSize;
 import com.pluralsight.Enums.CultureThemes;
 
 //import arrays and stream
-import java.util.ArrayList;
 import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 //create meals from menu class
 public class MosaicBowl extends MenuItem{
@@ -20,17 +20,15 @@ public class MosaicBowl extends MenuItem{
 
     //add constructors
 
-    public MosaicBowl(String name, BowlSize bowlSize, CultureThemes cultureTheme,
-                      ArrayList<MainSide> mainSides, ArrayList<Toppings> toppings,
-                      String signatureName, boolean passportPowerUp) {
+    public MosaicBowl(BowlSize bowlSize, CultureThemes cultureTheme, boolean passportPowerUp) {
         super("Mosaic Bowl");
         this.bowlSize = bowlSize;
         this.cultureTheme = cultureTheme;
         this.mainSides = new ArrayList<>();
         this.toppings = new ArrayList<>();
-        this.signatureName = "Build Your Own Mosaic Bowl"; // <-- maybe add opt bring your own bowl for % off
+        this.signatureName = "Build Your Own Mosaic Bowl";
         this.passportPowerUp = passportPowerUp;
-    }
+    }// maybe add opt bring your own bowl for %10-15 off
 
     //add signature mosaic bowl signature
     public void setSignatureName(String signatureName) {
@@ -38,23 +36,27 @@ public class MosaicBowl extends MenuItem{
     }
     //add main sides and toppings to mosaic bowl
     public void addMainSides(MainSide mainSide) {
-        mainSide.add(mainSides);
+        mainSides.add(mainSide);
     }
     public void addToppings(Toppings topping) {
-        topping.add(toppings);
+        toppings.add(topping);
     }
 
     //get price by overriding method
     @Override
     public double getPrice() {
         double toppingsTotalPrice = toppings.stream()
-                .mapToDouble(topping -> topping.getPrice(bowlSize))
+                .mapToDouble(topping -> topping.getPrice(bowlSize)).sum();
+
+        double mainSidesTotalPrice = mainSides.stream()
+                .mapToDouble(MainSide::getPrice)
                 .sum();
 
         //passportpower up is an extra 15cents to instill knowledge about  using paper materials
         // opens up the door for reduce reuse recycle and composting education
         //returns the total of mosaic bowl -- can only get passportbadge with food purchase
-        return bowlSize.getBasePrice() + toppingsTotalPrice + (passportPowerUp ? 0.15: 0);
+        return bowlSize.getBasePrice() + toppingsTotalPrice +
+                mainSidesTotalPrice + (passportPowerUp ? 0.15: 0);
     }
 
     @Override
@@ -62,20 +64,23 @@ public class MosaicBowl extends MenuItem{
         //if no toppings selcted return a message
         String toppingList = toppings.isEmpty()
                 ? "Your Topping Selection is Empty"
-                : toppings.stream().map(toppings -> toppings.getMealDetails())
+                : toppings.stream()
+                .map(Toppings::getMealDetails)
                 .collect(Collectors.joining(",\t\n "));
 
         //get premium toppings
         long premiumToppingsCount = toppings.stream()
-                .filter(Toppings :: isPremium).count();
-        if(premiumToppingsCount > 0) {
+                .filter(Toppings::isPremium).count();
+
+        if (premiumToppingsCount > 0) {
             toppingList += "\nNote: " + premiumToppingsCount + " Premium Topping(s) Added!";
         }
 
         //add meal sides
         String mainSidesList = mainSides.isEmpty()
                 ? "Your Main Side Selection is Empty"
-                : mainSides.stream().map(MainSide::getMealDetails)
+                : mainSides.stream()
+                .map(MainSide::getMealDetails)
                 .collect(Collectors.joining(",\t\n "));
 
         // add details and format  bowl size, culture theme, main sides, toppings, and passport power up
@@ -85,7 +90,8 @@ public class MosaicBowl extends MenuItem{
                 "Main Sides: " + mainSidesList + "\n" +
                 "Toppings: " + toppingList + "\n" +
                 "Premium Toppings: " + premiumToppingsCount + "\n" +
-                "Passport Power Up: " + (passportPowerUp ? "Yes" : "No") + "\n";
+                "Passport Power Up: " + (passportPowerUp ? "Yes" : "No") + "\n" +
+                "Price: $" + String.format("%.2f", getPrice()) + "\n";
     }
 }
-}
+

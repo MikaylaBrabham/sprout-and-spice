@@ -8,9 +8,9 @@ public enum BowlSize {
     SPROUT(5.00),
 
     //medium = bloom
-    BLOOM(9.00),
+    BLOOM(8.00),
     //large = harvest
-    HARVEST(11.00);
+    HARVEST(10.00);
 
     private final double BasePrice;
 

@@ -4,8 +4,8 @@ public enum DrinkSize {
 
     // drink sizes
     SMALL(1.00),
-    MEDIUM(3.00),
-    LARGE(5.00);
+    MEDIUM(2.00),
+    LARGE(3.00);
 
     private final double price;
 

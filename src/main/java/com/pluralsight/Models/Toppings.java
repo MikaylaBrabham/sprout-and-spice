@@ -3,21 +3,19 @@ package com.pluralsight.Models;
 //import topping types and bowl sizes
 import com.pluralsight.Enums.ToppingType;
 import com.pluralsight.Enums.BowlSize;
-import com.pluralsight.Models.MenuItem;
 
-import static com.pluralsight.Enums.BowlSize.HARVEST;
 
 public class Toppings {
     //add properties
     private String name;
-    private ToppingType type;
+    private ToppingType toppingType;
     private boolean anyExtras;
 
-    //add constructors
 
-    public Toppings(String name, ToppingType type, boolean anyExtras) {
+    //add constructors
+    public Toppings(String name, ToppingType toppingType, boolean anyExtras) {
         this.name = name;
-        this.type = type;
+        this.toppingType = toppingType;
         this.anyExtras = anyExtras;
     }
 
@@ -26,14 +24,14 @@ public class Toppings {
         return name;
     }
     public ToppingType getType() {
-        return type;
+        return toppingType;
     }
 
     //add premium options for toppings
     public boolean isPremium() {
-        return type == ToppingType.VEGETARIAN_PREMIUM_TOPPING ||
-               type == ToppingType.VEGAN_PREMIUM_TOPPING ||
-               type == ToppingType.GLUTEN_FREE_PREMIUM_TOPPING;
+        return toppingType == ToppingType.VEGETARIAN_PREMIUM_TOPPING ||
+               toppingType == ToppingType.VEGAN_PREMIUM_TOPPING ||
+               toppingType == ToppingType.GLUTEN_FREE_PREMIUM_TOPPING;
     }
     // get bowl prices
     public double getPrice(BowlSize bowlSize) {
@@ -65,7 +63,7 @@ public class Toppings {
 
     //output for the different options
     public String getMealDetails() {
-        return name + (isPremium() ? "Premium Options: " : "Regular Options: ") + type;
+        return name + (isPremium() ? "Premium Options: " : "Regular Options: ") + toppingType;
     }
 }
 
