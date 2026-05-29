@@ -28,8 +28,8 @@ public class SignatureBowlService {
     //trying not to make them sound corny
     private void loadSignatureBowls() {
 
-        signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl"); // S.O MOM
-        signatureBowls.put(CultureThemes.SALKEHATCHIE, "Low Country Bowl"); // S.O GRANDMA
+        String southernComfortBowl = signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl");// S.O MOM
+        signatureBowls.put(CultureThemes.SALKEHATCHIE, "Low Country Bowl")// S.O GRANDMA
         signatureBowls.put(CultureThemes.YORUBA_NIGERIAN, "Joy Bowl"); // S.O MICHAEL
         signatureBowls.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, "Golden Bowl"); // S.O SMITA
         signatureBowls.put(CultureThemes.LEVANTINE_MEDITERRANEAN, "Garden Bowl"); // S.O GABRIEL
