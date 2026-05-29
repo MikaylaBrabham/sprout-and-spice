@@ -7,9 +7,9 @@ public enum CultureThemes {
     SALKEHATCHIE("Salkehatchie Cuisine"),
     SOUTH_INDIAN_GUJARATI("South Indian Gujarati Cuisine"),
     LEVANTINE_MEDITERRANEAN("Levantine Mediterranean Cuisine"),
-    ITAL_CARRIBBEAN("Ital Caribbean Cuisine"),
+    ITAL_CARIBBEAN("Ital Caribbean Cuisine"),
     OKINAWAN_JAPANESE("Okinawan Japanese Cuisine"),
-    BRAZILLIAN("Brazilian Cuisine"),
+    BRAZILIAN("Brazilian Cuisine"),
     DUTCH_CUISINE("Dutch Cuisine");
 
     private final String displayName;
