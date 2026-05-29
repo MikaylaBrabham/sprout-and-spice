@@ -1,38 +1,37 @@
 package com.pluralsight.Models;
-//import list
+//import list for menu items
 import java.util.List;
 
 public class CulturalMenu {
-    //add lists for every type of premium and regular toppings
-    private String base;
-    //vegetarian
+
+    //add properties
+    private List<String> bases;
     private List<String> vegetarianPremiums;
     private List<String> vegetarianRegulars;
-
-    //vegan
     private List<String> veganPremiums;
     private List<String> veganRegulars;
-
-    //gluten free
     private List<String> glutenFreePremiums;
     private List<String> glutenFreeRegulars;
 
-    //condiments
     private List<String> condiments;
-
-    // funfacts
-    private List<String> funFact;
-
-
-    //add constructors
+    private List<String> specialtyDrinks;
+    private List<String> funFacts;
 
 
-    public CulturalMenu(String base, List<String> vegetarianPremiums,
-                        List<String> vegetarianRegulars, List<String> veganPremiums,
-                        List<String> veganRegulars, List<String> glutenFreePremiums,
-                        List<String> glutenFreeRegulars, List<String> condiments,
-                        List<String> funFact) {
-        this.base = base;
+    //add constructor for menu items
+    public CulturalMenu(
+            List<String> bases,
+            List<String> vegetarianPremiums,
+            List<String> vegetarianRegulars,
+            List<String> veganPremiums,
+            List<String> veganRegulars,
+            List<String> glutenFreePremiums,
+            List<String> glutenFreeRegulars,
+            List<String> condiments,
+            List<String> specialtyDrinks,
+            List<String> funFacts
+    ) {
+        this.bases = bases;
         this.vegetarianPremiums = vegetarianPremiums;
         this.vegetarianRegulars = vegetarianRegulars;
         this.veganPremiums = veganPremiums;
@@ -40,15 +39,13 @@ public class CulturalMenu {
         this.glutenFreePremiums = glutenFreePremiums;
         this.glutenFreeRegulars = glutenFreeRegulars;
         this.condiments = condiments;
-        this.funFact = funFact;
+        this.specialtyDrinks = specialtyDrinks;
+        this.funFacts = funFacts;
     }
 
-    public CulturalMenu(List<String> strings, List<String> vegetarianPremiums, List<String> vegetarianRegulars, List<String> veganPremiums, List<String> veganRegulars, List<String> glutenFreePremiums, List<String> glutenFreeRegulars, List<String> condiments) {
-    }
-// add getters
-
-    public String getBase() {
-        return base;
+    //add getters for menu items
+    public List<String> getBases() {
+        return bases;
     }
 
     public List<String> getVegetarianPremiums() {
@@ -79,7 +76,11 @@ public class CulturalMenu {
         return condiments;
     }
 
-    public List<String> getFunFact() {
-        return funFact;
+    public List<String> getSpecialtyDrinks() {
+        return specialtyDrinks;
+    }
+
+    public List<String> getFunFacts() {
+        return funFacts;
     }
 }
