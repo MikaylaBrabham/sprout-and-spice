@@ -14,7 +14,7 @@ import java.util.Map;
 public class MenuServices {
 
     //add properties
-    private Map<CultureThemes, CulturalMenu> menu;
+    public Map<CultureThemes, CulturalMenu> menu;
 
     //add new hashmap and load menu
     public MenuServices() {
@@ -22,7 +22,7 @@ public class MenuServices {
         loadMyMenu();
     }
 
-    private void loadMyMenu() {
+    //private void loadMyMenu() {
 
         // Southern Carolina Lowcountry
         menu.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, new CulturalMenu(
@@ -143,7 +143,7 @@ public class MenuServices {
             return menu.get(cultureTheme);
         }
     }
-}
+
 
 
 

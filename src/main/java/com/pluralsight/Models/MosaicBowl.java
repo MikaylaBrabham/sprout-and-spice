@@ -20,7 +20,7 @@ public class MosaicBowl extends MenuItem{
 
     //add constructors
 
-    public MosaicBowl(BowlSize bowlSize, CultureThemes cultureTheme, boolean passportPowerUp) {
+    public MosaicBowl(BowlSize bowlSize, CultureThemes cultureTheme, String base, boolean passportPowerUp) {
         super("Mosaic Bowl");
         this.bowlSize = bowlSize;
         this.cultureTheme = cultureTheme;
@@ -30,7 +30,6 @@ public class MosaicBowl extends MenuItem{
         this.signatureName = "Build Your Own Mosaic Bowl";
     }
     // maybe add opt bring your own bowl for %10-15 off
-
     //add signature mosaic bowl signature
     public void setSignatureName(String signatureName) {
         this.signatureName = signatureName;
