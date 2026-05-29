@@ -20,9 +20,6 @@ public class Toppings {
     }
 
     //add getters
-    public String getName() {
-        return name;
-    }
     public ToppingType getType() {
         return toppingType;
     }
@@ -37,7 +34,6 @@ public class Toppings {
     public double getPrice(BowlSize bowlSize) {
         // premium toppings cost more = more unhealthy
         // regular toppings cost less = healthier option
-        //opposite from 'merica SAD
         if (!isPremium()) {
             return 0;
         }
