@@ -51,7 +51,7 @@ public class Drinks extends MenuItem {
             case YORUBA_NIGERIAN ->
                     "Enjoy our ginger and hibiscus drink called Zobo which is a fan favorite all around Nigeria.";
             case LEVANTINE_MEDITERRANEAN ->
-                    "Experience the vibrant and refreshing flavors of the Mediterranean with our mnit pomegranate lemonade, crafted out o fresh herbs and citrus.";
+                    "Experience the vibrant and refreshing flavors of the Mediterranean with our mint pomegranate lemonade, crafted out of fresh herbs and citrus.";
             case ITAL_CARIBBEAN ->
                     "Indulge in the bold and vibrant flavors of the Caribbean with our Ital-themed pineapple coconut ginger tea.";
             case OKINAWAN_JAPANESE ->
