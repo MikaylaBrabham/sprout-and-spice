@@ -4,6 +4,7 @@ package com.pluralsight.Services;
 
 //import hashmaps, list, and map
 import com.pluralsight.Enums.CultureThemes;
+import com.pluralsight.Models.Order;
 
 import java.util.HashMap;
 import java.util.List;
@@ -53,6 +54,9 @@ public class DrinkService {
     // get specialty drink options for a specific culture theme
     public String getSpecialtyDrinkOptions(CultureThemes theme) {
         return specialtyDrinkOptions.get(theme);
+    }
+
+    public void displayDrinks(Order order) {
     }
 }
 

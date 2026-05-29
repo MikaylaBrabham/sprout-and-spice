@@ -191,7 +191,7 @@ public class UserInterface {
 
         switch (choice) {
             case "1":
-                receiptManager.saveReceipt(order);
+                receiptManager.createReceipt(order);
                 System.out.println("Receipt saved!");
                 break;
             case "0":
