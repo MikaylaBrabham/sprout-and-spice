@@ -4,6 +4,7 @@ package com.pluralsight.Services;
 
 import com.pluralsight.Enums.CultureThemes;
 import com.pluralsight.Models.CulturalMenu;
+import com.pluralsight.Models.Order;
 //import com.pluralsight.Models.Order;
 
 //import hashmap, lists, and maps
@@ -143,6 +144,9 @@ public class MenuServices {
     //add a method to load menu
     public CulturalMenu getMenu(CultureThemes cultureTheme) {
         return menu.get(cultureTheme);
+    }
+
+    public void displaySides(Order order) {
     }
 
     //public void displaySides(Order order) {

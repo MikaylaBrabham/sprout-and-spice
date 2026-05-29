@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class SignatureBowlService {
 
     //add strings
-    private Map<CultureThemes, String> signatureBowls;
+    private Map<CultureThemes, MosaicBowl> signatureBowls = new HashMap<>();
     private MenuServices menuServices;
 
     //add constructor
