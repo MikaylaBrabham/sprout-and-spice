@@ -59,7 +59,7 @@ public class Toppings {
 
     //output for the different options
     public String getMealDetails() {
-        return name + (isPremium() ? "Premium Options: " : "Regular Options: ") + toppingType;
+        return name + " " + (isPremium() ? "Premium Options: " : "Regular Options: ") + "-" + toppingType;
     }
 }
 
