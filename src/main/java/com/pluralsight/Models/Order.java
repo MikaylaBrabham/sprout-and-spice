@@ -1,4 +1,36 @@
 package com.pluralsight.Models;
 
+//add in imports
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collectors;
 public class Order {
+    //add array for menu
+    private ArrayList<MenuItem> menuItems;
+
+    //add array for order from
+    public Order() {
+        this.menuItems = new ArrayList<>();
+    }
+
+    //add menu item to order
+public void addMenuItem(MenuItem menuItem) {
+    this.menuItems.add(menuItem);
+}
+    //add is empty method
+    public boolean isEmpty() {
+        return menuItems.isEmpty();
+    }
+
+    //add has bowl method to check if customer order has mosaic bowl
+    public boolean hasBowl() {
+        return menuItems.stream().anyMatch(menuItem -> menuItem instanceof MosaicBowl);
+    }
+    //add method to check if order has drink or side; if no bowl they must get both
+    public boolean hasDrinkOrSideDish() {
+        return menuItems.stream().anyMatch
+                (menuItem -> menuItem instanceof Drinks || menuItem instanceof MainSide);
+    }
+
+}
 }
