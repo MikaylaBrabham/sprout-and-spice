@@ -10,6 +10,7 @@ import com.pluralsight.Models.Toppings;
 
 //import hashmap
 import java.util.Map;
+import java.util.HashMap;
 
 public class SignatureBowlService {
 
@@ -19,7 +20,7 @@ public class SignatureBowlService {
 
     //add constructor
     public SignatureBowlService(MenuServices menuServices) {
-        signatureBowls = signatureBowls;
+        this.signatureBowls = signatureBowls;
         this.menuServices = menuServices;
         loadSignatureBowls();
     }
@@ -28,7 +29,7 @@ public class SignatureBowlService {
     //trying not to make them sound corny
     private void loadSignatureBowls() {
 
-        String southernComfortBowl = signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl");// S.O MOM
+        signatureBowls.put(CultureThemes.SOUTHERN_CAROLINA_LOWCOUNTRY, "Southern Comfort Bowl");// S.O MOM
         signatureBowls.put(CultureThemes.SALKEHATCHIE, "Low Country Bowl")// S.O GRANDMA
         signatureBowls.put(CultureThemes.YORUBA_NIGERIAN, "Joy Bowl"); // S.O MICHAEL
         signatureBowls.put(CultureThemes.SOUTH_INDIAN_TAMILIAN, "Golden Bowl"); // S.O SMITA
@@ -46,6 +47,7 @@ public class SignatureBowlService {
         //add mosaic bowl with size and theme
         MosaicBowl bowl = new MosaicBowl(bowlSize, theme, false);
         bowl.setSignatureName(getSignatureBowls(theme));
+
         //add base and toppings to signature bowl
         bowl.addToppings(new Toppings(menu.getVeganPremiums().get(0), ToppingType.VEGAN_PREMIUM_TOPPING, false));
         bowl.addToppings(new Toppings(menu.getVeganRegulars().get(0), ToppingType.VEGAN_REGULAR_TOPPING, false));
