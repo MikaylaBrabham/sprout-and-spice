@@ -32,5 +32,17 @@ public void addMenuItem(MenuItem menuItem) {
                 (menuItem -> menuItem instanceof Drinks || menuItem instanceof MainSide);
     }
 
+    //add totalprice to get total
+    public double getTotalPrice() {
+        return menuItems.stream().mapToDouble(MenuItem::getPrice).sum();
 }
+
+//add order details to get newest to oldest orders in the given format
+    public String getOrderDetailsAndFormat() {
+        //add array for menuitems
+        ArrayList<MenuItem> reversedMenuItems = new ArrayList<>(menuItems);
+        Collections.reverse(reversedMenuItems);
+
+
+    }
 }
